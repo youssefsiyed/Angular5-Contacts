@@ -1,0 +1,28 @@
+<div class="container spacer">
+  <div class="panel panel-success">
+    <div class="panel-heading">Saisie Contacts</div>
+    <div class="panel-body">
+      <div class="container">
+        <form #f="ngForm" (ngsubmit)="onsavecontact(f.value)">
+        <div class="form-group">
+          <label class="control-label">Nom :</label>
+          <input type="text" class="form-control" ngModel name="nom" required>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Prenom :</label>
+          <input type="text" class="form-control" ngModel name="prenom" required>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Email :</label>
+          <input type="text" class="form-control" ngModel name="email" required email>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Telephone :</label>
+          <input type="text" class="form-control" ngModel name="tel" required>
+        </div>
+        <button [disabled]="!f.valid" type="submit" class="btn btn-success">Ajouter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
